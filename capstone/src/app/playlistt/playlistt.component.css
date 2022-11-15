@@ -1,0 +1,35 @@
+.heading{
+   
+       
+    text-align: center;
+    color:black;
+   
+    transition: 0.5s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading:hover {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc,
+        0 3px 0 rgb(65, 233, 23), 0 4px 0 #ccc,
+        0 5px 0 rgb(207, 19, 19), 0 6px 0 #ccc,
+        0 7px 0 rgb(63, 17, 230), 0 8px 0 #ccc,
+        0 9px 0 rgb(245, 19, 169), 0 10px 0 #ccc,
+        0 11px 0 rgb(248, 244, 8), 0 12px 0 #ccc,
+        0 20px 30px rgba(10, 191, 236, 0.5);
+}
+
+.card {
+    background-image: -webkit-linear-gradient(left, #c4e17f, #62c2e4);
+    background-image: -moz-linear-gradient(left, #c4e17f, #62c2e4);
+    background-image: -o-linear-gradient(left, #c4e17f,  #62c2e4);
+    background-image: linear-gradient(to right, #c4e17f, #62c2e4);
+}
+
+/* .k{
+    background-image: -webkit-linear-gradient(left, black,black);
+    background-image: -moz-linear-gradient(left,black,black );
+    background-image: -o-linear-gradient(left, black,black);
+    background-image: linear-gradient(to right,black,black);
+}
+ */
+

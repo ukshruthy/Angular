@@ -1,0 +1,27 @@
+.card-img-top {
+    width: 100%;
+    height: 12vw;
+    object-fit: cover;
+}
+.Wrapper{
+    text-align: center;
+}
+.container1 {
+    position: top;
+    margin-top: -148px;
+}
+.footer {
+    margin-left: -85px;
+    overflow: hidden;
+}
+.home1{
+    /* background-image: -webkit-linear-gradient(left, #c4e17f, #62c2e4);
+    background-image: -moz-linear-gradient(left, #c4e17f, #62c2e4);
+    background-image: -o-linear-gradient(left, #c4e17f,  #62c2e4);
+    background-image: linear-gradient(to right, #c4e17f, #62c2e4); */
+    background-image: -webkit-linear-gradient(left, black,black);
+    background-image: -moz-linear-gradient(left,black,black );
+    background-image: -o-linear-gradient(left, black,black);
+    background-image: linear-gradient(to right,black,black);
+    
+}

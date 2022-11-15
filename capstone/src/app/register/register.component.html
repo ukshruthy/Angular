@@ -1,0 +1,123 @@
+
+<div class="container" style="padding-top: 150px;padding-bottom: 100px;">
+    <div class="row centered-form">
+    <div class="col-xs-16 col-sm-12 col-md-8 col-sm-offset-2 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                    <h3 class="panel-title">Please sign up for BlueMoon <small>It's free!</small></h3>
+                     </div>
+                     <div class="panel-body">
+                    <div [formGroup]="SongsForm">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                        <input type="text" name="Fname" formControlName="Fname" class="form-control input-sm" placeholder="First Name" [(ngModel)]="sFname">
+                        <div *ngIf="SongsForm.controls['Fname'].invalid && (SongsForm.controls['Fname'].dirty||SongsForm.controls['Fname'].touched)" class="alert alert-danger">
+                            <div *ngIf="SongsForm.controls.Fname.errors.required">
+                            Firstname is required.   
+                            </div></div>
+                    </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="Lname" formControlName="Lname" class="form-control input-sm" placeholder="Last Name" [(ngModel)]="sLname">
+                                    <div *ngIf="SongsForm.controls['Lname'].invalid && (SongsForm.controls['Lname'].dirty||SongsForm.controls['Lname'].touched)" class="alert alert-danger">
+                                        <div *ngIf="SongsForm.controls.Lname.errors.required">
+                                        Lastname is required.   
+                                        </div></div>
+                                
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" name="Email" formControlName="Email" class="form-control input-sm" placeholder="Email Address" [(ngModel)]="sEmail" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            <div *ngIf="SongsForm.controls['Email'].invalid && (SongsForm.controls['Email'].dirty||SongsForm.controls['Email'].touched)" class="alert alert-danger">
+                                <div *ngIf="SongsForm.controls.Email.errors.required">
+                                Email is required.   
+                                </div>
+                                <div *ngIf="SongsForm.controls.Email.errors.pattern">
+                                    Provide valid Email ID.   
+                                    </div>
+                            </div>
+                        
+                        </div>
+
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                            </div>
+                            <select class="custom-select" style="max-width: 120px;">
+                                <option selected="">+91</option>
+                                <option value="1">+44</option>
+                                <option value="2">+14</option>
+                                <option value="3">+63</option>
+                            </select>
+                           
+                            <input name="Mobile" class="form-control" formControlName="Mobile"placeholder="Phone number" type="text" [(ngModel)]="sMobile">
+                            <div *ngIf="SongsForm.controls['Mobile'].invalid && (SongsForm.controls['Mobile'].dirty||SongsForm.controls['Mobile'].touched)" class="alert alert-danger">
+                                <div *ngIf="SongsForm.controls.Mobile.errors.required">
+                                Mobile.No is required.   
+                                </div>
+                                
+                                </div>
+                       
+                        </div> 
+
+
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-map-marker"></i> </span>
+                            </div>
+                            <select id="Location" formControlName="Location" [(ngModel)]="sLocation">
+                                <option *ngFor="let g of Location" [value]="g" >
+                                    {{ g }}
+                                  </option>
+                        
+                        </select>
+                        <div *ngIf="SongsForm.controls['Location'].invalid && (SongsForm.controls['Location'].dirty||SongsForm.controls['Location'].touched)" class="alert alert-danger">
+                            <div *ngIf="SongsForm.controls.Location.errors.required">
+                            Please select Location.   
+                            </div></div>
+                            <!-- <select class="form-control">
+                                <option selected=""> Select Location</option>
+                                <option>TamilNadu</option>
+                                <option>Karnataka</option>
+                                <option>Hyderabad</option>
+                                <option>Delhi</option>
+                                <option>Kerala</option>
+                            </select> -->
+                        </div> 
+
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="password" name="Password" formControlName="Password" class="form-control input-sm" placeholder="Password" [(ngModel)]="sPassword" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$">
+                                    <div *ngIf="SongsForm.controls['Password'].invalid && (SongsForm.controls['Password'].dirty||SongsForm.controls['Password'].touched)" class="alert alert-danger">
+                                        <div *ngIf="SongsForm.controls.Password.errors.required">
+                                        Password is required.   
+                                        </div>
+                                        <div *ngIf="SongsForm.controls.Password.errors.pattern">
+                                            Provide valid Password.
+                                            requirements for password:
+                                            * At least 1 Uppercase,
+                                            * At least 1 Lowercase,
+                                            * At least 1 Number,
+                                            * At least 1 Symbol, symbol allowed --> !@#$%^&*_=+-,
+                                            * Min 8 chars and Max 12 chars .  
+                                            </div>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                           
+                        </div>
+                        
+                        <button type="submit" (click)="register()" value="Submit" class="btn btn-info btn-block">Submit</button>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="row1" style="width:1598px">
+<div style="padding-top: 150px;"><h3 style="text-align: center;">Songs in your Album</h3></div>
+
+  <div class="container" style="padding-bottom: 50px;">
+    <div class="col text-center" style="padding-top: 20px;text-align: center;padding-bottom: 20px;">
+      <a class="btn btn-primary" (click)="delete()">Clear all</a></div>
+  <div class="row" style="width:1300px">
+  <div class="row" *ngFor="let s of mus; let i=index" style="padding-bottom:30px;padding-top: 20px;padding-left: 20px;" >
+      
+    <div class="col-sm-4" style="padding-bottom: 10px;text-align: center;">
+    
+    <div class="card" style="width:350px;height: 220px;">
+    
+    <div class="card card-body" style="text-align: center">
+      <!-- <label for="one" style="text-align: left;"><input type="checkbox" id="one" name="{{s.Song}}" (change)="OnChange(s,i)" [(ngModel)]="s.isselected"/></label> -->
+     <!-- <div style="text-align: right;margin-top:-20px"><button type="button"class="fas fa-trash" (change)="OnChange(s,i)" style="border: none;background-color:white;color: red;" ></button></div> -->
+      <p class="card-title" style="text-align: center;font-size:small;"><b style="color:blue;">Song Title : </b> <b>{{s.Song}}</b> </p>
+       <p style="text-align: center;font-size:small;"><b style="color:crimson;">Name of the Album : </b><b>{{s.Album}}</b> </p>
+        <p  style="text-align: center;font-size:small;"><b style="color:darkgreen;">Duration : </b><b>{{s.length}}</b> </p>
+        <p  style="text-align: center;font-size:small;"><b style="color:darkred;">Singers : </b><b>{{s.Singers}}</b> </p>
+      <div class="col text-center">
+      <a class="btn btn-primary">Play</a>
+    <!-- </div> -->
+    </div></div>
+  </div>
+
+  </div></div>
+</div></div></div>

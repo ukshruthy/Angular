@@ -1,0 +1,133 @@
+{
+  "Songs": [
+    {
+      "Song": "Nanba Nanba",
+      "Album": "Natpadhigaram-79",
+      "id": 6,
+      "Singers": "Haricharan",
+      "length": "05:53",
+      "genre": "country music",
+      "URL": "https",
+      "isselected": false
+    },
+    {
+      "Song": "Mulumuna",
+      "Album": "Malluweb.info",
+      "id": 7,
+      "Singers": "NA",
+      "length": "02:58",
+      "genre": "Classic",
+      "URL": "https",
+      "isselected": false
+    },
+    {
+      "Song": "Pagal Iravai",
+      "Album": "Maraigirai",
+      "id": 8,
+      "Singers": "Adheef Muhamed",
+      "length": "05:19",
+      "genre": "Rythmn",
+      "URL": "https",
+      "isselected": false
+    },
+    {
+      "Song": "Odey Odey",
+      "Album": "Raja Rani",
+      "id": 9,
+      "Singers": "Sasha,Vijay Prakash",
+      "length": "04:31",
+      "genre": "Pop",
+      "URL": "https",
+      "isselected": false
+    },
+    {
+      "Song": "Pallikoodam",
+      "Album": "Natpe thunai",
+      "id": 15,
+      "Singers": "Sanjith Hedge",
+      "length": "03:28",
+      "genre": "bazz",
+      "URL": "https",
+      "isselected": false
+    },
+    {
+      "Song": "Yenti Yenti",
+      "Album": "Geetha govindham",
+      "id": 16,
+      "Singers": "Chinmayi",
+      "length": "03:19",
+      "genre": "Romantic",
+      "URL": "https",
+      "isselected": false
+    },
+    {
+      "Song": "Kabadi kabadi",
+      "Album": "Kennedy club",
+      "id": 17,
+      "Singers": "Reshmi sateesh,srinidhi",
+      "length": "04:00",
+      "genre": "Country music",
+      "URL": "https",
+      "isselected": false
+    },
+    {
+      "Song": "Abinaya",
+      "Album": "abinaya",
+      "id": 18,
+      "Singers": "Mugen rao",
+      "length": "06:12",
+      "genre": "Romantic",
+      "URL": "https",
+      "isselected": false
+    },
+    {
+      "Song": "Para Para",
+      "Album": "Neerparavai",
+      "Singers": "G.V.Prakash",
+      "length": "05:19",
+      "genre": "Others",
+      "URL": "https",
+      "id": 19
+    },
+    {
+      "Song": "Adada Adada",
+      "Album": "Santhosh Subramanyam",
+      "Singers": "Yuvan",
+      "length": "04:23",
+      "genre": "Classic",
+      "URL": "https",
+      "id": 20
+    },
+    {
+      "Song": "Oh Azhage",
+      "Album": "Maara",
+      "Singers": "Benny Dayal,Ghibran",
+      "length": "04:42",
+      "genre": "Rythmn",
+      "URL": "https",
+      "id": 21
+    },
+    {
+      "Song": "Nanba Nanba",
+      "Album": "Natpadhigaram-79",
+      "Singers": "Haricharan",
+      "length": "05:53",
+      "genre": "Rythmn",
+      "URL": "https",
+      "id": 22
+    }
+  ],
+  "Data": [
+    {
+      "Email": "ukshruthy@gmail.com",
+      "Password": "Shruthy@21",
+      "Fname": "Shruthy",
+      "Lname": "Umapathy",
+      "Location": "TamilNadu",
+      "Mobile": 8220382960,
+      "isloggedIn": false,
+      "id": 1
+    }
+  ]
+  
+}

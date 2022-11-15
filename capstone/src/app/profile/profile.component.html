@@ -1,0 +1,70 @@
+<div style="padding-top: 200px;">
+<h2 *ngIf="!isloggedIn"style="text-align: center;">No user logged In </h2>
+<div *ngIf="isloggedIn">
+<h1  style="text-align: center;">Welcome!{{currentUser.Fname}}</h1>
+<h3 style="text-align: center; padding-bottom: 20px;">User Details</h3>
+<div class="row gutters-sm"style="padding-left:20px">
+    <div class="col-md-4 mb-3">
+      <div class="card" style="width:400px" style="border: none;">
+        <div class="card-body">
+          <div class="d-flex flex-column align-items-center text-center">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj7GAWKPMWjh4a9HPscq9veQ496E2iaNfOtA&usqp=CAU" alt="Admin" class="rounded-circle" width="150">
+            <div class="mt-3">
+              <h4>{{currentUser.Fname}} {{currentUser.Lname}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-8">
+      <div class="card mb-3" style="width:550px">
+        <div class="card-body" style="width:550px">
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0" style="color: blue;">First Name</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              {{currentUser.Fname}}
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0" style="color:crimson">Last Name</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              {{currentUser.Lname}}
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0" style="color: darkgreen;">Email</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              {{currentUser.Email}}
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0" style="color: darkmagenta;">Location</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+              {{currentUser.Location}}
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-3">
+              <h6 class="mb-0" style="color: firebrick;">Mobile</h6>
+            </div>
+            <div class="col-sm-9 text-secondary">
+               {{currentUser.Mobile}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

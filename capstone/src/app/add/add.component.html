@@ -1,0 +1,102 @@
+<div class="add1">
+<div style="width:800px;padding-left: 250px;padding-bottom: 50px;padding-top: 150px;padding-bottom: 150px;">
+    <div style="width: 750px;padding-left:10px;padding-bottom:30px;border: 2px solid;">
+        <h3 class= "add" style="color:black;text-align: center;" *ngIf="isAddMode"><b>Add Song</b></h3>
+        <h3 class= "add" style="color:black;text-align: center;" *ngIf="!isAddMode"><b>Edit Song</b></h3><hr>
+        
+        <form [formGroup]="SongsForm">
+            <table>
+                <tr>
+            <th style="font-size: medium;color:darkblue" for="sSong">Song Title:</th>
+            
+            <th class="one"><input type="text"  formControlName="sSong" [(ngModel)]="sSong"  required/>
+                <div *ngIf="SongsForm.controls['sSong'].invalid && (SongsForm.controls['sSong'].dirty||SongsForm.controls['sSong'].touched)" class="alert alert-danger">
+                    <div *ngIf="SongsForm.controls.sSong.errors.required">
+                    Songname is required.   
+                    </div>
+                    <div *ngIf="SongsForm.controls.sSong.errors.minlength">
+                        Name must be atleast 6 characters long.   
+                        </div>
+                </div>
+            </th>
+             
+                </tr><br><br>
+                <tr>  
+            <th style="font-size: medium;color:darkgreen" for="sSingers"> Singers :</th>
+           
+            <th class="one"><input type="text"  name="singername" [(ngModel)]="sSingers" formControlName="sSingers" required/>
+                <div *ngIf="SongsForm.controls['sSingers'].invalid && (SongsForm.controls['sSingers'].dirty||SongsForm.controls['sSingers'].touched)" class="alert alert-danger">
+                    <div *ngIf="SongsForm.controls.sSingers.errors.required">
+                    singername is required.   
+                    </div>
+                    
+                </div>
+            </th>
+             
+        </tr>  <br><br>
+        <tr>  
+            <th style="font-size: medium;color:darkmagenta" for="sAlbum"> Album Title :</th>  
+            
+            <th class="one"><input type="text" name="Albumname" [(ngModel)]="sAlbum" formControlName="sAlbum" required/>
+                <div *ngIf="SongsForm.controls['sAlbum'].invalid && (SongsForm.controls['sAlbum'].dirty||SongsForm.controls['sAlbum'].touched)" class="alert alert-danger">
+                    <div *ngIf="SongsForm.controls.sAlbum.errors.required">
+                    Albumname is required.   
+                    </div>
+                    
+                </div>
+            </th>
+           
+        </tr> <br><br>
+        <tr>  
+            <th style="font-size: medium;color:brown" for="sURL"> URL :</th>  
+            
+            <th class="one"><input type="text" name="URL" [(ngModel)]="sURL" formControlName="sURL" required />
+                <div *ngIf="SongsForm.controls['sURL'].invalid && (SongsForm.controls['sURL'].dirty||SongsForm.controls['sURL'].touched)" class="alert alert-danger">
+                    <div *ngIf="SongsForm.controls.sURL.errors.required">
+                    URL is required.   
+                    </div>
+                  
+                </div>
+            </th>
+           
+        </tr> <br><br>
+        <tr>   
+            <th style="font-size: medium;color:deeppink" for="slength"> length :</th>  
+          
+            <th class="one"><input type="time" name="length" [(ngModel)]="slength" formControlName="slength" >
+                <div *ngIf="SongsForm.controls['slength'].invalid && (SongsForm.controls['slength'].dirty||SongsForm.controls['slength'].touched)" class="alert alert-danger">
+                    <div *ngIf="SongsForm.controls.slength.errors.required">
+                    Song Duration length is required.   
+                    </div>
+                    
+                </div>
+            </th>  
+            
+        </tr><br><br>
+    
+        <tr>
+            <th style="font-size: medium;color:purple;" for="sgenre"> Genre :</th> 
+            
+            <th class="one">
+                <select id="genre" formControlName="sgenre" [(ngModel)]="sgenre" required style="width:190px">
+                    <option *ngFor="let g of Genre" [value]="g" >
+                        {{ g }}
+                      </option>
+            
+            </select>
+            <div *ngIf="SongsForm.controls['sgenre'].invalid && (SongsForm.controls['sgenre'].dirty||SongsForm.controls['sgenre'].touched)" class="alert alert-danger">
+                <div *ngIf="SongsForm.controls.sgenre.errors.required">
+                Please select the Genre.   
+                </div>
+                
+            </div>
+             </th>
+        </tr>
+        </table><br><br><hr>
+    
+        <span>Form Status: {{SongsForm.status}} </span><br><br>
+        <button class="btn btn-primary" [disabled]="!SongsForm.valid" (click)="addDetails()" >submit</button>
+         </form>
+    
+    </div>
+    </div></div>

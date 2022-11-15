@@ -1,0 +1,57 @@
+<div *ngIf="!isloggedIn" style="padding-top: 150px;width:600px">
+<h2 style="text-align:center;">Please Login to view</h2>
+</div>
+<div *ngIf="isloggedIn">
+<div class="column" style="padding-top: 150px;width:600px">
+
+
+<h4 class="list"style="text-align: center;font-style: italic;width:450px">Songs List</h4><br>
+ 
+ <div style="text-align: center;width:450px"> <input type="checkbox" id="one" name="name" (click)="hidden($event)"/>
+  <label style="padding-left: 5px;padding-right: 10px;"> Duration</label>
+  <input type="checkbox"id="one" name="name" (click)="hidden1($event)"/>
+  <label style="padding-left: 5px;"> Singers</label></div>
+
+  <div style="text-align:center;background-color:none;width:450px">
+  <button type="button" (click)="onSubmit()" class="fas fa-plus" style="border: none;font-size: 20px;background-color:#c4e17f"> Playlist  </button></div><br>
+ <div  style="text-align:left;padding-bottom: 1px;margin-bottom: -225px;background-color:none"> <button type="button" routerLink="add" routerActiveLink="active" class="fas fa-plus-circle" style="border: none;font-size: 20px;background-color:#b8ce85"> NewSong</button>
+
+</div>
+
+<div style="padding-bottom: 50px;padding-top: 200px;text-align:right;width:450px">
+  <button type="button" [disabled]="disabled"(click)="delete($event)" class="fas fa-trash" style="border: none;font-size: 20px;background-color:#62c2e4;"> Delete </button></div>
+    
+ 
+
+  <div class="container" style="padding-left: 150px;">
+
+    <div class="search-hero" style="text-align: center;padding-bottom: 30px;width:300px;padding-left: 60px;">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" (ngModelChange)="onChange($event)" placeholder="search your songs">
+       </div>
+     
+    <div class="row" *ngFor="let s of mysong|filter:searchText; let i=index" style="padding-bottom:30px;">
+      
+      <div class="col-sm-11" style="width: 15rem;padding-bottom: 10px;text-align: center;">
+      <!-- <img class="card-img-top" src="./assets/teddy.jpg" alt="Card image cap" style="height:150px;"> -->
+     
+      <div class="card card-body" style="text-align: center;">
+        <label for="one" style="text-align: left;"><input type="checkbox" id="one" name="{{s.Song}}" (change)="OnChange(s,i)" [(ngModel)]="s.isselected"/></label>
+       <div style="text-align: right;margin-top:-20px"><button type="button"class="fas fa-edit" style="border: none;background-color:#62c2e4;color: red;" routerLink="edit/{{s.id}}" routerLinkActive="active" ></button></div>
+        <p class="card-title" style="text-align: center;font-size:small;"><b style="color:blue;">Song Title : </b> <b>{{s.Song}}</b> </p>
+         <p style="text-align: center;font-size:small;"><b style="color:crimson;">Name of the Album : </b><b>{{s.Album}}</b> </p>
+          <p  *ngIf="hiddenProperty"style="text-align: center;font-size:small;"><b style="color:darkgreen;">Duration : </b><b>{{s.length}}</b> </p>
+          <p  *ngIf="hiddenProperty1"style="text-align: center;font-size:small;"><b style="color:darkred;">Singers : </b><b>{{s.Singers}}</b> </p>
+        <div class="col text-center">
+        <a class="btn btn-primary">Play</a>
+      </div>
+      </div>
+    </div></div></div>
+
+    
+   
+  </div>
+</div>
+  <app-playlistt [SelectedSongs]="mysong"[PlayListAddButtons]="PlayListAddButtons"></app-playlistt>
+  
+
+

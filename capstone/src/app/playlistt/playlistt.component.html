@@ -1,0 +1,37 @@
+<div style="padding-left:650px">
+  
+<div style="padding-top: 130px;text-align:center;width:610px;margin-top:-3050px">
+ 
+  <h2 class="heading" style="text-align: center;color:black;padding-bottom: 20px;">My list of Songs</h2>
+  <!-- <div style="text-align: center;"><a class="btn btn-primary"routerLink="view" routerLinkActive="active" required >Chart View</a></div>  -->
+  <div class="container" style="padding-left: 100px;padding-top: 30px;" >
+ 
+      <div class="row" >
+    <!-- <tr><th></th><th></th><th></th></tr><tr> -->
+<!-- <div style="text-align:center;padding-left: 150px;padding-top: 30px;"> -->
+    <div *ngFor="let item of mysong" >
+        <div *ngIf="item.isselected && PlaylistAdded">
+            <div class="col-sm-12" style="padding-bottom: 10px;text-align: center;">
+              <div class="card" style="width:200px;height: 220px;">
+                <!-- <img class="card-img-top" src="./assets/teddy.jpg" alt="Card image cap" style="height:150px;"> -->
+                <div class="card card-body" style="text-align:center;">
+                  <label for="one" style="text-align: left;"><input type="checkbox" id="one" name="{{item.Song}}" /></label>
+                 <!-- <div style="text-align: right;margin-top:-20px"><button type="button" class="fas fa-edit" style="border: none;background-color:#62c2e4;color: red;"></button></div> -->
+                  <p class="card-title" style="text-align: center;font-size:small;"><b style="color:blue;">Song Title : </b> <b>{{item.Song}}</b> </p>
+                   <p style="text-align: center;font-size:small;"><b style="color:crimson;">Name of the Album : </b><b>{{item.Album}}</b> </p>
+                    <p  *ngIf="hiddenProperty"style="text-align: center;font-size:small;"><b style="color:darkgreen;">Duration : </b><b>{{item.length}}</b> </p>
+                    <p  *ngIf="hiddenProperty1"style="text-align: center;font-size:small;"><b style="color:darkred;">Singers : </b><b>{{item.Singers}}</b> </p>
+                  <div class="col text-center">
+                  <a class="btn btn-primary">Play</a>
+                </div>
+                
+                </div></div>
+              </div>
+              </div>
+            </div>
+    
+          <!-- </div> -->
+        <!-- </tr> -->
+          </div>
+
+</div></div>
